@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900">
+<rect width="1400" height="900" fill="#f2f2f3"/>
+<rect x="0" y="0" width="1400" height="260" fill="#070709"/>
+<text x="70" y="95" font-family="Arial, Helvetica, sans-serif" font-size="24" letter-spacing="5" fill="#8d8d94">EX.VISION</text>
+<text x="70" y="190" font-family="Arial, Helvetica, sans-serif" font-size="64" font-weight="800" fill="#ffffff">IDENTIDADE VISUAL</text>
+<text x="70" y="235" font-family="Arial, Helvetica, sans-serif" font-size="18" letter-spacing="3" fill="#8d8d94">GUIA RÁPIDO DA MARCA</text>
+<text x="70" y="350" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#111115">PALETA DE CORES</text>
+<rect x="70" y="390" width="210" height="150" rx="12" fill="#070709"/><text x="70" y="570" font-family="Arial" font-size="18" fill="#111115">#070709 • Preto</text>
+<rect x="330" y="390" width="210" height="150" rx="12" fill="#ffffff" stroke="#ccc"/><text x="330" y="570" font-family="Arial" font-size="18" fill="#111115">#FFFFFF • Branco</text>
+<rect x="590" y="390" width="210" height="150" rx="12" fill="#2d7dff"/><text x="590" y="570" font-family="Arial" font-size="18" fill="#111115">#2D7DFF • Azul</text>
+<rect x="850" y="390" width="210" height="150" rx="12" fill="#8d8d94"/><text x="850" y="570" font-family="Arial" font-size="18" fill="#111115">#8D8D94 • Cinza</text>
+<text x="70" y="660" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#111115">DIREÇÃO VISUAL</text>
+<text x="70" y="705" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#44444b">Minimalista • tecnológico • moderno • alto contraste • digital</text>
+<text x="70" y="765" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#44444b">Aplicações: sites, banners, capas, redes sociais e apresentações.</text>
+</svg>
