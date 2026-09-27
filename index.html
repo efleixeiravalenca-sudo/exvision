@@ -92,6 +92,54 @@ footer{padding:35px 0;color:#777780;font-size:13px;border-top:1px solid #15151a}
   .brand-signature{color:#2d7dff;font-weight:700}
   @media(max-width:700px){.story-content{grid-template-columns:1fr}}
 
+
+/* ===== EX.VISION — ANIMATION PACK ===== */
+:root{--blue:#2d7dff;--blue-soft:rgba(45,125,255,.18);--line:#292930}
+body{overflow-x:hidden}
+body:before{content:"";position:fixed;inset:-30%;pointer-events:none;background:radial-gradient(circle at 50% 0%,rgba(45,125,255,.075),transparent 34%);z-index:-2;animation:ambient 10s ease-in-out infinite alternate}
+@keyframes ambient{from{transform:translate3d(-2%,0,0) scale(1)}to{transform:translate3d(2%,2%,0) scale(1.05)}}
+.logo-animated{position:relative;display:inline-flex;align-items:center;gap:0;isolation:isolate;animation:logoFloat 4s ease-in-out infinite}
+.logo-animated:after{content:"";position:absolute;left:-8px;right:-8px;bottom:-5px;height:1px;background:linear-gradient(90deg,transparent,var(--blue),transparent);transform:scaleX(.25);opacity:0;transition:.35s}
+.logo-animated:hover:after{transform:scaleX(1);opacity:1}
+.logo-mark{display:inline-block;animation:logoMark 2.8s ease-in-out infinite}
+.logo-dot{color:var(--blue);display:inline-block;text-shadow:0 0 0 rgba(45,125,255,0);animation:logoDot 2.8s ease-in-out infinite}
+.logo-name{display:inline-block;background:linear-gradient(90deg,#fff 0%,#fff 42%,#75aaff 50%,#fff 58%,#fff 100%);background-size:240% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:logoShine 4.5s linear infinite}
+@keyframes logoFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-2px)}}
+@keyframes logoMark{0%,100%{transform:translateX(0)}50%{transform:translateX(1px)}}
+@keyframes logoDot{0%,100%{transform:scale(1);text-shadow:0 0 0 rgba(45,125,255,0)}50%{transform:scale(1.35);text-shadow:0 0 16px rgba(45,125,255,.8)}}
+@keyframes logoShine{0%{background-position:200% 0}55%,100%{background-position:-40% 0}}
+.hero{position:relative}
+.hero:after{content:"";position:absolute;width:420px;height:420px;right:-170px;top:-100px;border-radius:50%;background:radial-gradient(circle,rgba(45,125,255,.12),transparent 68%);filter:blur(8px);pointer-events:none;animation:heroOrb 7s ease-in-out infinite alternate}
+@keyframes heroOrb{from{transform:translate(0,0) scale(.9);opacity:.45}to{transform:translate(-35px,25px) scale(1.12);opacity:.9}}
+.hero-title{animation:titleIn .9s cubic-bezier(.16,1,.3,1) both}
+.hero-title .title-glow{display:inline-block;animation:titleGlow 3s ease-in-out 1s infinite}
+@keyframes titleIn{from{opacity:0;transform:translateY(30px);filter:blur(8px)}to{opacity:1;transform:none;filter:none}}
+@keyframes titleGlow{0%,100%{text-shadow:0 0 0 rgba(45,125,255,0)}50%{text-shadow:0 0 30px rgba(45,125,255,.3)}}
+.btn,.project-link{position:relative;overflow:hidden;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.btn:before,.project-link:before{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 25%,rgba(255,255,255,.55) 50%,transparent 75%);transform:translateX(-120%);transition:transform .65s ease}
+.btn:hover:before,.project-link:hover:before{transform:translateX(120%)}
+.btn:hover,.project-link:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(45,125,255,.15)}
+.btn.primary:hover{box-shadow:0 10px 34px rgba(45,125,255,.28)}
+.ripple-dot{position:absolute;border-radius:50%;background:rgba(45,125,255,.35);transform:scale(0);animation:ripple .65s ease-out;pointer-events:none}
+@keyframes ripple{to{transform:scale(7);opacity:0}}
+.reveal{opacity:0;transform:translateY(34px);filter:blur(3px);transition:opacity .8s ease,transform .8s cubic-bezier(.16,1,.3,1),filter .8s ease}
+.reveal.is-visible{opacity:1;transform:none;filter:none}
+.stagger>*{opacity:0;transform:translateY(24px);transition:opacity .65s ease,transform .65s cubic-bezier(.16,1,.3,1)}
+.is-visible .stagger>*{opacity:1;transform:none}
+.is-visible .stagger>*:nth-child(2){transition-delay:.1s}.is-visible .stagger>*:nth-child(3){transition-delay:.2s}.is-visible .stagger>*:nth-child(4){transition-delay:.3s}.is-visible .stagger>*:nth-child(5){transition-delay:.4s}
+.card,.obra-card,.story-content>div,.project{transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease,background .3s ease}
+.card:hover,.story-content>div:hover{transform:translateY(-8px);border-color:rgba(45,125,255,.55);box-shadow:0 16px 45px rgba(0,0,0,.25),0 0 25px rgba(45,125,255,.06)}
+.interactive-card{transform-style:preserve-3d}
+.interactive-card:hover{box-shadow:0 20px 55px rgba(0,0,0,.3),0 0 35px rgba(45,125,255,.08)}
+.obra-card:hover .obra-image:after{opacity:1}
+.obra-image{position:relative}
+.obra-image:after{content:"VER TRABALHO";position:absolute;inset:auto 18px 18px auto;padding:8px 11px;border:1px solid rgba(255,255,255,.2);border-radius:999px;background:rgba(7,7,9,.72);backdrop-filter:blur(8px);color:#fff;font-size:10px;font-weight:800;letter-spacing:2px;opacity:0;transform:translateY(8px);transition:.3s}
+.obra-card:hover .obra-image:after{transform:none}
+.cursor-glow{position:fixed;left:0;top:0;width:260px;height:260px;border-radius:50%;pointer-events:none;background:radial-gradient(circle,rgba(45,125,255,.13),transparent 65%);filter:blur(3px);transform:translate(-50%,-50%);z-index:9999;mix-blend-mode:screen;opacity:0;transition:opacity .3s}
+body.cursor-active .cursor-glow{opacity:1}
+@media(max-width:760px){.hero:after{right:-260px}.cursor-glow{display:none}.card:hover,.story-content>div:hover{transform:translateY(-4px)}.obra-image:after{display:none}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}.reveal,.stagger>*{opacity:1!important;transform:none!important;filter:none!important}.cursor-glow{display:none}}
+
 </style>
 </head>
 
@@ -99,7 +147,7 @@ footer{padding:35px 0;color:#777780;font-size:13px;border-top:1px solid #15151a}
 <div class="wrap">
 
 <nav>
-  <a class="logo" href="#">EX<span>.</span>VISION</a>
+  <a class="logo logo-animated" href="#" aria-label="EX.VISION"><span class="logo-mark">EX</span><span class="logo-dot">.</span><span class="logo-name">VISION</span></a>
   <div class="menu">
     <a href="#sobre">Sobre</a>
     <a href="#servicos">Serviços</a>
@@ -112,54 +160,54 @@ footer{padding:35px 0;color:#777780;font-size:13px;border-top:1px solid #15151a}
 
 <header class="hero">
   <div class="eyebrow">DESIGN • VIDEO • WEB</div>
-  <h1>CRIATIVIDADE COM<br><span class="blue">VISÃO DIGITAL.</span></h1>
+  <h1 class="hero-title">CRIATIVIDADE COM<br><span class="blue title-glow">VISÃO DIGITAL.</span></h1>
   <p>Meu nome é <strong>Everton Luiz</strong>. Tenho 16 anos, sou aluno do ensino médio técnico em informática e trabalho com design gráfico, edição de vídeo e criação de sites.</p>
   <div class="buttons">
-    <a class="btn primary" href="#trabalhos">Ver meus trabalhos</a>
-    <a class="btn" href="#contato">Entrar em contato</a>
+    <a class="btn primary magnetic ripple" href="#trabalhos">Ver meus trabalhos</a>
+    <a class="btn magnetic ripple" href="#contato">Entrar em contato</a>
   </div>
 </header>
 
-<section class="section" id="sobre">
+<section class="section reveal" id="sobre">
   <div class="eyebrow">01 / SOBRE MIM</div>
   <h2>Quem está por trás da<br>EX.<span class="blue">VISION?</span></h2>
   <p class="muted">Sou Everton Luiz, estudante de técnico em informática e criador da EX.VISION. Tenho formação em design gráfico e experiência em criação de artes, banners, capas de vídeo, edição de vídeos e desenvolvimento de sites.</p>
 </section>
 
-<section class="section" id="servicos">
+<section class="section reveal" id="servicos">
   <div class="eyebrow">02 / SERVIÇOS</div>
   <h2>O que eu faço.</h2>
-  <div class="cards">
+  <div class="cards stagger">
     <div class="card"><div class="num">01</div><h3>Design Gráfico</h3><p>Banners, artes para redes sociais, capas e peças visuais.</p></div>
     <div class="card"><div class="num">02</div><h3>Edição de Vídeo</h3><p>Edição para vídeos, Reels, TikTok, YouTube e conteúdo digital.</p></div>
     <div class="card"><div class="num">03</div><h3>Web Design</h3><p>Criação de páginas e sites modernos, responsivos e personalizados.</p></div>
   </div>
 </section>
 
-<section class="section" id="projetos">
+<section class="section reveal" id="projetos">
   <div class="eyebrow">03 / PROJETO EM DESTAQUE</div>
   <h2>Meu trabalho.</h2>
-  <div class="project">
+  <div class="project interactive-card">
     <img src="banner-exvision.svg" alt="Identidade visual EX.VISION">
     <div class="project-info">
       <div>
         <h3>EX.VISION — Identidade Visual</h3>
         <p>Branding • Design Gráfico • Web Design</p>
       </div>
-      <a class="project-link" href="case-study.html">Ver projeto →</a>
+      <a class="project-link magnetic ripple" href="case-study.html">Ver projeto →</a>
     </div>
   </div>
 </section>
 
-<section class="portfolio-obras" id="trabalhos">
+<section class="portfolio-obras reveal" id="trabalhos">
   <div class="obras-heading">
     <div class="eyebrow">04 / MEUS TRABALHOS</div>
     <h2>Projetos que eu <span>criei.</span></h2>
     <p>Alguns dos meus trabalhos reais de design gráfico, thumbnails e banners, desenvolvidos por mim para diferentes estilos de conteúdo.</p>
   </div>
 
-  <div class="obras-grid">
-    <article class="obra-card">
+  <div class="obras-grid stagger">
+    <article class="obra-card interactive-card">
       <div class="obra-image">
         <img src="thumbnail-minecraft.png" alt="Thumbnail de Minecraft criada por Everton Luiz" loading="lazy">
       </div>
@@ -174,7 +222,7 @@ footer{padding:35px 0;color:#777780;font-size:13px;border-top:1px solid #15151a}
       </div>
     </article>
 
-    <article class="obra-card">
+    <article class="obra-card interactive-card">
       <div class="obra-image">
         <img src="banner-sunn-story.png" alt="Banner SUNN STORY criado por Everton Luiz" loading="lazy">
       </div>
@@ -192,11 +240,11 @@ footer{padding:35px 0;color:#777780;font-size:13px;border-top:1px solid #15151a}
 </section>
 
 
-<section class="brand-story" id="sobre-a-marca">
+<section class="brand-story reveal" id="sobre-a-marca">
   <div class="eyebrow">05 / HISTÓRIA DA MARCA</div>
   <h2>A história da <span>EX.VISION.</span></h2>
 
-  <div class="story-content">
+  <div class="story-content stagger">
     <div>
       <h3>Como nasceu</h3>
       <p>A EX.VISION nasceu da vontade de transformar criatividade em projetos visuais. A marca reúne design gráfico, edição de vídeo e criação de sites em uma identidade moderna e digital.</p>
@@ -232,7 +280,7 @@ footer{padding:35px 0;color:#777780;font-size:13px;border-top:1px solid #15151a}
   <p class="brand-signature">EX.VISION — veja além da ideia.</p>
 </section>
 
-<section class="section" id="contato">
+<section class="section reveal" id="contato">
   <div class="eyebrow">06 / CONTATO</div>
   <h2>Vamos criar algo?</h2>
   <div class="contact">
@@ -245,7 +293,86 @@ footer{padding:35px 0;color:#777780;font-size:13px;border-top:1px solid #15151a}
   </div>
 </section>
 
-<footer>© 2026 EX.VISION — Everton Luiz</footer>
+<footer class="reveal">© 2026 EX.VISION — Everton Luiz</footer>
+<div class="cursor-glow" aria-hidden="true"></div>
 </div>
+
+<script>
+(() => {
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // Reveal sections as they enter the viewport.
+  const reveals = document.querySelectorAll('.reveal');
+  if (!reduceMotion && 'IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, {threshold:.14, rootMargin:'0px 0px -45px 0px'});
+    reveals.forEach(el => observer.observe(el));
+  } else {
+    reveals.forEach(el => el.classList.add('is-visible'));
+  }
+
+  // Button / link ripple effect.
+  document.querySelectorAll('.ripple').forEach(button => {
+    button.addEventListener('click', e => {
+      const rect = button.getBoundingClientRect();
+      const dot = document.createElement('span');
+      dot.className = 'ripple-dot';
+      const size = Math.max(rect.width, rect.height) * .22;
+      dot.style.width = dot.style.height = size + 'px';
+      dot.style.left = (e.clientX - rect.left - size/2) + 'px';
+      dot.style.top = (e.clientY - rect.top - size/2) + 'px';
+      button.appendChild(dot);
+      setTimeout(() => dot.remove(), 700);
+    });
+  });
+
+  // Subtle magnetic movement on desktop buttons.
+  if (!reduceMotion && window.matchMedia('(pointer:fine)').matches) {
+    document.querySelectorAll('.magnetic').forEach(el => {
+      el.addEventListener('mousemove', e => {
+        const r = el.getBoundingClientRect();
+        const x = (e.clientX - (r.left + r.width/2)) / r.width * 10;
+        const y = (e.clientY - (r.top + r.height/2)) / r.height * 10;
+        el.style.transform = `translate(${x}px, ${y}px) translateY(-3px)`;
+      });
+      el.addEventListener('mouseleave', () => el.style.transform = '');
+    });
+  }
+
+  // Soft blue cursor glow on desktop.
+  const glow = document.querySelector('.cursor-glow');
+  if (!reduceMotion && glow && window.matchMedia('(pointer:fine)').matches) {
+    let tx = innerWidth/2, ty = innerHeight/2, x = tx, y = ty;
+    window.addEventListener('pointermove', e => { tx=e.clientX; ty=e.clientY; document.body.classList.add('cursor-active'); }, {passive:true});
+    const loop = () => {
+      x += (tx-x)*.12; y += (ty-y)*.12;
+      glow.style.left = x+'px'; glow.style.top = y+'px';
+      requestAnimationFrame(loop);
+    };
+    loop();
+    document.addEventListener('mouseleave', () => document.body.classList.remove('cursor-active'));
+  }
+
+  // Gentle 3D tilt for portfolio/project cards.
+  if (!reduceMotion && window.matchMedia('(pointer:fine)').matches) {
+    document.querySelectorAll('.interactive-card').forEach(card => {
+      card.addEventListener('mousemove', e => {
+        const r = card.getBoundingClientRect();
+        const rx = ((e.clientY-r.top)/r.height-.5)*-4;
+        const ry = ((e.clientX-r.left)/r.width-.5)*5;
+        card.style.transform = `perspective(900px) rotateX(${rx}deg) rotateY(${ry}deg) translateY(-5px)`;
+      });
+      card.addEventListener('mouseleave', () => card.style.transform = '');
+    });
+  }
+})();
+</script>
+
 </body>
 </html>
