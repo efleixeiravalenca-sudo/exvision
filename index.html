@@ -1,107 +1,45 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="EX.VISION — Portfólio de Everton Luiz: design gráfico, edição de vídeo e desenvolvimento web.">
-  <title>EX.VISION — Everton Luiz</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EX.VISION — Everton Luiz</title>
+<meta name="description" content="EX.VISION — Portfólio de Everton Luiz: design gráfico, edição de vídeo e criação de sites.">
+<style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#070709;color:#f5f5f7;font-family:Arial,Helvetica,sans-serif}
+a{color:inherit;text-decoration:none}.wrap{max-width:1180px;margin:auto;padding:0 28px}
+nav{height:78px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #17171c}
+.logo{font-size:27px;font-weight:900;letter-spacing:-1.5px}.logo span{color:#2d7dff}.menu{display:flex;gap:25px;color:#aaaab2;font-size:14px}.menu a:hover{color:#fff}
+.hero{padding:95px 0 80px}.eyebrow{color:#8d8d94;letter-spacing:5px;font-size:12px;font-weight:700}.hero h1{font-size:clamp(52px,9vw,110px);line-height:.9;letter-spacing:-6px;margin:22px 0;max-width:900px}.blue{color:#2d7dff}.hero p{color:#9b9ba3;max-width:680px;font-size:18px;line-height:1.7}.buttons{display:flex;gap:14px;margin-top:32px;flex-wrap:wrap}.btn{padding:17px 23px;border:1px solid #303038;border-radius:12px;font-weight:700}.btn.primary{background:#fff;color:#09090b;border-color:#fff}
+.section{padding:90px 0;border-top:1px solid #15151a}.section h2{font-size:clamp(35px,6vw,65px);margin:12px 0 30px;letter-spacing:-3px}.muted{color:#9b9ba3;line-height:1.7;max-width:750px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:40px}.card{background:#101014;border:1px solid #27272e;border-radius:16px;padding:26px;min-height:230px}.card h3{font-size:22px;margin:30px 0 10px}.card p{color:#9b9ba3;line-height:1.6}.num{color:#2d7dff;font-size:12px;letter-spacing:3px;font-weight:700}
+.project{margin-top:40px;border:1px solid #292930;border-radius:18px;overflow:hidden;background:#0e0e12}.project img{width:100%;display:block}.project-info{padding:28px;display:flex;align-items:center;justify-content:space-between;gap:20px}.project-info h3{font-size:30px;margin:0 0 8px}.project-info p{margin:0;color:#9b9ba3}.project-link{white-space:nowrap;background:#fff;color:#070709;padding:14px 18px;border-radius:10px;font-weight:700}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:30px}.contact-box{border:1px solid #292930;border-radius:16px;padding:28px;background:#101014}.contact-box a{display:block;padding:13px 0;border-bottom:1px solid #24242a}.contact-box a:last-child{border:0}.contact-box span{color:#8d8d94;font-size:12px;display:block;margin-bottom:4px}
+footer{padding:35px 0;color:#777780;font-size:13px;border-top:1px solid #15151a}
+@media(max-width:760px){.menu{display:none}.cards,.contact{grid-template-columns:1fr}.hero h1{letter-spacing:-3px}.project-info{display:block}.project-link{display:inline-block;margin-top:20px}}
+</style>
 </head>
-<body>
-  <header class="header">
-    <a href="#inicio" class="logo">EX<span>.</span>VISION</a>
-    <button class="menu-btn" aria-label="Abrir menu">☰</button>
-    <nav class="nav">
-      <a href="#inicio">Início</a>
-      <a href="#sobre">Sobre</a>
-      <a href="#servicos">Serviços</a>
-      <a href="#projetos">Projetos</a>
-      <a href="#contato">Contato</a>
-    </nav>
-  </header>
+<body><div class="wrap">
+<nav><a class="logo" href="#">EX<span>.</span>VISION</a><div class="menu"><a href="#sobre">Sobre</a><a href="#servicos">Serviços</a><a href="#projetos">Projetos</a><a href="#contato">Contato</a></div></nav>
+<header class="hero"><div class="eyebrow">DESIGN • VIDEO • WEB</div>
+<h1>CRIATIVIDADE COM<br><span class="blue">VISÃO DIGITAL.</span></h1>
+<p>Meu nome é <strong>Everton Luiz</strong>. Tenho 16 anos, sou aluno do ensino médio técnico em informática e trabalho com design gráfico, edição de vídeo e criação de sites.</p>
+<div class="buttons"><a class="btn primary" href="#projetos">Ver meu trabalho</a><a class="btn" href="#contato">Entrar em contato</a></div></header>
 
-  <main>
-    <section id="inicio" class="hero">
-      <div class="hero-content">
-        <p class="eyebrow">DESIGN • VIDEO • WEB</p>
-        <h1>Transformo ideias em<br><span>experiências visuais.</span></h1>
-        <p class="hero-text">Eu sou Everton Luiz, criador da EX.VISION. Trabalho com design gráfico, edição de vídeo e criação de sites.</p>
-        <div class="buttons">
-          <a class="btn primary" href="#projetos">Ver meu trabalho</a>
-          <a class="btn secondary" href="#contato">Entrar em contato</a>
-        </div>
-      </div>
-      <div class="hero-card">
-        <div class="orbit"></div>
-        <div class="mark">EX<span>.</span></div>
-        <p>CREATIVE<br>PORTFOLIO</p>
-      </div>
-    </section>
+<section class="section" id="sobre"><div class="eyebrow">01 / SOBRE MIM</div><h2>Quem está por trás da<br>EX.<span class="blue">VISION?</span></h2>
+<p class="muted">Sou Everton Luiz, estudante de técnico em informática e criador da EX.VISION. Tenho formação em design gráfico e experiência em criação de artes, banners, capas de vídeo, edição de vídeos e desenvolvimento de sites.</p></section>
 
-    <section id="sobre" class="section about">
-      <div class="section-title">
-        <p class="eyebrow">01 / SOBRE MIM</p>
-        <h2>Quem está por trás da EX.VISION?</h2>
-      </div>
-      <div class="about-grid">
-        <div class="about-text">
-          <p>Meu nome é <strong>Everton Luiz</strong>, tenho 16 anos e sou estudante do Ensino Médio Técnico em Informática.</p>
-          <p>Tenho curso de <strong>Design Gráfico</strong> e gosto de transformar ideias em artes, vídeos e experiências para a internet.</p>
-          <p>Faço banners, capas para vídeos, edição de vídeos, sites e outros projetos visuais.</p>
-        </div>
-        <div class="stats">
-          <div><strong>16</strong><span>anos</span></div>
-          <div><strong>∞</strong><span>criatividade</span></div>
-          <div><strong>4+</strong><span>áreas</span></div>
-        </div>
-      </div>
-    </section>
+<section class="section" id="servicos"><div class="eyebrow">02 / SERVIÇOS</div><h2>O que eu faço.</h2><div class="cards">
+<div class="card"><div class="num">01</div><h3>Design Gráfico</h3><p>Banners, artes para redes sociais, capas e peças visuais.</p></div>
+<div class="card"><div class="num">02</div><h3>Edição de Vídeo</h3><p>Edição para vídeos, Reels, TikTok, YouTube e conteúdo digital.</p></div>
+<div class="card"><div class="num">03</div><h3>Web Design</h3><p>Criação de páginas e sites modernos, responsivos e personalizados.</p></div>
+</div></section>
 
-    <section id="servicos" class="section">
-      <div class="section-title">
-        <p class="eyebrow">02 / SERVIÇOS</p>
-        <h2>O que eu faço</h2>
-      </div>
-      <div class="cards">
-        <article class="card"><div class="icon">✦</div><h3>Design Gráfico</h3><p>Artes digitais, banners, identidade visual e peças para redes sociais.</p></article>
-        <article class="card"><div class="icon">▶</div><h3>Edição de Vídeo</h3><p>Cortes, ritmo, efeitos, transições e edição pensada para redes sociais.</p></article>
-        <article class="card"><div class="icon">&lt;/&gt;</div><h3>Criação de Sites</h3><p>Sites modernos, responsivos e personalizados para diferentes projetos.</p></article>
-        <article class="card"><div class="icon">▣</div><h3>Capas & Banners</h3><p>Thumbnails, capas e banners com foco em impacto visual e destaque.</p></article>
-      </div>
-    </section>
+<section class="section" id="projetos"><div class="eyebrow">03 / PROJETO EM DESTAQUE</div><h2>Meu trabalho.</h2>
+<div class="project"><img src="banner-exvision.svg" alt="Identidade visual EX.VISION"><div class="project-info">
+<div><h3>EX.VISION — Identidade Visual</h3><p>Branding • Design Gráfico • Web Design</p></div><a class="project-link" href="case-study.html">Ver projeto →</a>
+</div></div></section>
 
-    <section id="projetos" class="section projects">
-      <div class="section-title">
-        <p class="eyebrow">03 / PORTFÓLIO</p>
-        <h2>Projetos</h2>
-      </div>
-      <div class="project-grid">
-        <article class="project"><div class="project-img p1"><span>DESIGN</span></div><div class="project-info"><h3>Artes & Banners</h3><p>Design para redes sociais e projetos digitais.</p></div></article>
-        <article class="project"><div class="project-img p2"><span>VIDEO</span></div><div class="project-info"><h3>Edição de Vídeo</h3><p>Conteúdo dinâmico para vídeos e redes sociais.</p></div></article>
-        <article class="project"><div class="project-img p3"><span>WEB</span></div><div class="project-info"><h3>Web Design</h3><p>Interfaces modernas e experiências responsivas.</p></div></article>
-      </div>
-      <p class="hint">Seus trabalhos reais podem ser colocados aqui depois — basta substituir os blocos pelas imagens dos projetos.</p>
-    </section>
-
-    <section id="contato" class="section contact">
-      <div class="contact-box">
-        <p class="eyebrow">04 / CONTATO</p>
-        <h2>Vamos criar algo?</h2>
-        <p>Quer conversar sobre um projeto, arte, vídeo ou site? Fale comigo pelo Instagram.</p>
-        <a class="instagram" href="https://instagram.com/evlzzk" target="_blank" rel="noopener noreferrer">@evlzzk ↗</a>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="logo">EX<span>.</span>VISION</div>
-    <p>© 2026 Everton Luiz. Todos os direitos reservados.</p>
-    <a href="https://instagram.com/evlzzk" target="_blank" rel="noopener noreferrer">Instagram ↗</a>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
+<section class="section" id="contato"><div class="eyebrow">04 / CONTATO</div><h2>Vamos criar algo?</h2><div class="contact"><div><p class="muted">Se você precisa de uma arte, edição de vídeo ou site, entre em contato comigo.</p></div>
+<div class="contact-box"><a href="https://instagram.com/evlzzk" target="_blank" rel="noopener"><span>INSTAGRAM</span>@evlzzk ↗</a>
+<a href="tel:+5521973045470"><span>TELEFONE</span>(21) 97304-5470</a><a href="mailto:efleixeiravalenca@gmail.com"><span>E-MAIL</span>efleixeiravalenca@gmail.com</a></div></div></section>
+<footer>© 2026 EX.VISION — Everton Luiz</footer></div></body></html>
